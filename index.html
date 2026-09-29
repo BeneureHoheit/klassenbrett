@@ -404,10 +404,20 @@ header{
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
+  
+  const SUPABASE_URL = "https://mlmjvmywrpkhymbwcnan.supabase.co/rest/v1/";
+const SUPABASE_KEY = "sb_publishable_oB3uq-6vK3BTbtne8Wje5Q_-yajO4iU";
+
+const supabaseClient = supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
 
 const KEY="klassenbrett-v1";
+
 
 let state=JSON.parse(
   localStorage.getItem(KEY)||"null"
